@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Spreadsheet</title>
     <style>
+      p {
+        margin:  0 70px;
+      }
       td {
         text-align: right;
         width: 33%;
@@ -20,8 +23,15 @@
   <body>
     <table>  
       <thead>
+        <p>Puchase Orders</p>
+        <th>Order Date</th>
+        <th>SKU</th>
+        <th>Quantity</th>
       </thead>
       <tbody>
+        <td>07-16-2018</td>
+        <td>523402</td>
+        <td>54</td>
       </tbody>
     </table>
   </body>
