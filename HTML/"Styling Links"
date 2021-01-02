@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Styling links</title>
+    <style type="text/css">
+      a{
+        
+        text-transform: uppercase; /* uppercase */
+        text-decoration: none; /* no underline */
+        cursor: help; /* mouse pointer be a question mark */
+        color: purple;
+        
+        
+      
+        
+      } 
+    </style>
+  </head>
+  <body>
+    <a href="http://www.testdome.com"> Check documentation </a>
+  </body>
+</html>
