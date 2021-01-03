@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Advanced form</title>
+    </head>
+    <body>
+        <form>
+            Formula: <input name="formula" list="formulaList"/>
+            <datalist id="formulaList">
+                <option>sin</option>
+                <option>cos</option>
+                <option>tan</option>
+                <option>cot</option>
+            </datalist>
+			<!--
+			1. input field suggests the following options,  The <datalist> tag specifies a list of pre-defined options for an <input> element.
+			-->
+			
+            Iterations: <input name="iterations" type="range" min="1" max="10"/>
+			<!--
+			 2. input field is a slider  type="range". values from 1 to 10. min="1" max="10"
+			-->
+			
+            Precision: <input name="precision" type="number" min="1" max="100" value="50"/><br/>
+			<!--
+			3. input field is a number picker  type="number"  default value value="50"
+			-->
+			
+        </form>
+    </body>
+</html>
