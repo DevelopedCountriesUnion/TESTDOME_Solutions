@@ -9,12 +9,11 @@
         text-transform: uppercase; /* uppercase */
         text-decoration: none; /* no underline */
         cursor: help; /* mouse pointer be a question mark */
-        color: purple;
-        
-        
-      
-        
+        color: purple;  
       } 
+      
+      a::after { content: "<"; }
+      a::before { content: ">"; }
     </style>
   </head>
   <body>
