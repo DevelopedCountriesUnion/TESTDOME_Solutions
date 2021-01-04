@@ -12,8 +12,8 @@
         color: purple;  
       } 
       
-      a::after { content: "<"; }
-      a::before { content: ">"; }
+      a::after { content: "<"; }   /* The ::after selector inserts something after the content of each selected element(s).  */
+      a::before { content: ">"; }  /* The ::before selector inserts something before the content of each selected element(s). */
     </style>
   </head>
   <body>
