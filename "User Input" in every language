@@ -108,3 +108,60 @@ public class UserInput
 
 
 
+--- C++ ---
+
+#include <iostream>
+#include <string>
+#include <memory>
+
+class TextInput
+{
+    std::string cur;
+
+    virtual bool do_add(char c)
+    {
+        std::cout<<"input is: "<<c<<'\n';
+        return true;
+    }
+
+public:
+    virtual ~TextInput() = default;
+
+    void add(char c)
+    {
+        if ( do_add(c) )
+            cur += c;
+    }
+
+    std::string getValue()
+    {
+        return cur;
+    }
+};
+
+class NumericInput : public TextInput 
+{
+    virtual bool do_add(char c) override
+    {
+        if ( c>=48 && c <= 57 )
+        {
+            std::cout<<"input is a digit: "<< c <<'\n';
+            return true;
+        }
+
+        std::cout<<"input is not digit"<<'\n';
+        return false;
+    }
+};
+
+#ifndef RunTests
+int main()
+{
+    auto input = std::unique_ptr<TextInput>{new NumericInput()};
+    input->add('1');
+    input->add('a');
+    input->add('0');
+    std::cout << input->getValue() << '\n';
+}
+#endif
+
