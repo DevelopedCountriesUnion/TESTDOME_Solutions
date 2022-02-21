@@ -1,0 +1,23 @@
+Consider the following C# model:
+
+public class Meal
+{
+    public string Name { get; set; }
+    public double Calories { get; set; }
+    public List<string> Ingredients { get; set; }
+}
+The following template for Razor view engine accepts a Meal as model. Fill in the blanks so that the correct properties are printed.
+-------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+<body>
+  <h1>Name: @Model.Name</h1>
+  <p>Calories: @Model.Calories</p>
+  <p>Ingredients:</p>
+  <ul>
+    @foreach (var ingredient in Model.Ingredients) {
+        <li>@ingredient</li>
+    }
+  </ul>
+</body>
+</html>
